@@ -1,0 +1,12 @@
+include mixins/movie
+
+doctype html
+html(lang="ko")
+    body
+        header
+            h3
+                a(href=`/`) &larr; #{pageTitle}
+
+        ul 
+            each info in movies
+                +movie(info)

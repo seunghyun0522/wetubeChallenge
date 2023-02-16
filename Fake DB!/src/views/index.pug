@@ -1,0 +1,18 @@
+include mixins/movie
+
+doctype html
+html(lang="ko")
+    body
+        header
+            h1=pageTitle
+        nav
+            nav
+            form(method="GET" action="/filter")
+                input( placeholder="Filter by year", name="year", type="text")
+                input( placeholder="Filter by ratings", name="rating", type="text")
+                input( type="submit", value="Search")
+        ul 
+            each info in movies
+                +movie(info)
+            else 
+                li Not Found 🤖

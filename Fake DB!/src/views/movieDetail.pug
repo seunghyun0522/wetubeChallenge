@@ -1,0 +1,11 @@
+doctype html
+html(lang="ko")
+    body
+        header
+            h3
+                a(href=`/`) &larr; #{pageTitle}
+        div
+            p=movie.summary
+            ul 
+                each genres in movie.genres
+                    li=genres  
